@@ -6,7 +6,7 @@ Global object `exe` has a few methods. These methods allow code to be executed t
 
 `exe` also lets the user check whether a specific code block has been executed before. The user may also choose to remove a specific log of a code's execution.
 
-However, the amount of characters in each code block is limited. It is recommended to write code such that it only takes up about three quarters of the screen. You can also use minified code to allow for more things to be executed. (Code can be minified in multiple websites and sources. My recommendation is [Minify JS](https://minify-js.com "Minify JS"))
+However, the amount of characters in each code block is limited. It is recommended to write code such that it only takes up about three quarters of the screen. You can also use minified code to allow for more things to be executed. (Code can be minified in multiple websites and sources. My recommendation is [Minify JS](https://minify-js.com "JS Minifier"))
 
 ## Installation
 AutoExe can be installed into your Bloxd.io world by **copy-pasting the code below into World Code**.
@@ -14,5 +14,32 @@ AutoExe can be installed into your Bloxd.io world by **copy-pasting the code bel
 ## Usage
 The usable methods of global object `exe` is listed below.
 ```js
+/**
+ * Runs a code block at a given position.
+ * @param {number | number[]} x - Can also be an array, in which case y and z shouldn't be passed
+ * @param {number} [y]
+ * @param {number} [z]
+ * @returns {string} Code
+ */
+run(x, y, z)
 
+/**
+ * Checks whether a code block has been previously executed.
+ * Do note that this method requires set exec to be intialised. If set exec is not initialised or deleted/removed by the user, this method will not work.
+ * @param {number | number[]} x - Can also be an array, in which case y and z shouldn't be passed
+ * @param {number} [y]
+ * @param {number} [z]
+ * @returns {boolean}
+ */
+isExec(x, y, z)
+
+/**
+ * Removes the execution log of a code block at a given position.
+ * Do note that this method requires set exec to be intialised. If set exec is not initialised or deleted/removed by the user, this method will not work.
+ * @param {number | number[]} x - Can also be an array, in which case y and z shouldn't be passed
+ * @param {number} [y]
+ * @param {number} [z]
+ * @returns {void}
+ */
+removeExec(x, y, z)
 ```
