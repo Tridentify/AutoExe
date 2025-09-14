@@ -11,7 +11,7 @@ However, the amount of characters in each code block is limited. It is recommend
 ## Installation
 AutoExe can be installed into your Bloxd.io world by **copy-pasting the code below into World Code**.
 
-**Callbacks used**: None
+**Callbacks used**: None<br>
 **Variables used**: `exe`, `exec`
 
 ```js
