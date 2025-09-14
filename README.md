@@ -19,6 +19,8 @@ exec=new Set,exe={run:(pos,y,z)=>{if(Array.isArray(pos)){api.getBlock(pos);let d
 ```
 
 ## Usage
+
+### Methods
 The usable methods of global object `exe` is listed below.
 ```js
 /**
@@ -49,4 +51,15 @@ isExec(x, y, z)
  * @returns {void}
  */
 removeExec(x, y, z)
+```
+
+### Use Case
+AutoExe can be combined with callback `tick` to execute code in Code Blocks at the first tick (after the chunk is loaded). Example:
+```js
+// ... Code
+tick = (ms) => {
+  if (!exe.isExec(0, 0, 0)) {
+    exe.run(0, 0, 0)
+  }
+}
 ```
