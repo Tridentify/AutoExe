@@ -11,6 +11,13 @@ However, the amount of characters in each code block is limited. It is recommend
 ## Installation
 AutoExe can be installed into your Bloxd.io world by **copy-pasting the code below into World Code**.
 
+**Callbacks used**: None
+**Variables used**: `exe`, `exec`
+
+```js
+exec=new Set,exe={run:(pos,y,z)=>{if(Array.isArray(pos)){api.getBlock(pos);let data=api.getBlockData(...pos)?.persisted?.shared?.text;return eval(data),exec.add(JSON.stringify(pos)),data}if("number"==typeof pos&&"number"==typeof y&&"number"==typeof z){api.getBlock(pos,y,z);let data=api.getBlockData(pos,y,z)?.persisted?.shared?.text;return eval(data),exec.add(JSON.stringify([pos,y,z])),data}throw new Error("Invalid arguments inputted. Expected type array, or number for x, y and z")},isExec:(e,r,t)=>{if(Array.isArray(e))return[...exec].includes(JSON.stringify(e));if("number"==typeof e&&"number"==typeof r&&"number"==typeof t)return[...exec].includes(JSON.stringify([e,r,t]));throw new Error("Invalid arguments inputted. Expected type array, or number for x, y and z")},removeExec:(e,r,t)=>{if(Array.isArray(e))exec.delete(JSON.stringify(e));else{if("number"!=typeof e||"number"!=typeof r||"number"!=typeof t)throw new Error("Invalid arguments inputted. Expected type array, or number for x, y and z");exec.delete(JSON.stringify([e,r,t]))}}};
+```
+
 ## Usage
 The usable methods of global object `exe` is listed below.
 ```js
