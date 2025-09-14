@@ -6,7 +6,7 @@ Global object `exe` has a few methods. These methods allow code to be executed t
 
 `exe` also lets the user check whether a specific code block has been executed before. The user may also choose to remove a specific log of a code's execution.
 
-However, the amount of characters in each code block is limited. It is recommended to write code such that it only takes up about three quarters of the screen. You can also use minified code to allow for more things to be executed. (Code can be minified in multiple websites and sources. My recommendation is [Minify JS](https://minify-js.com "JS Minifier"))
+However, the amount of characters in each code block is limited. It is recommended to write code such that it only takes up about three quarters of the screen. You can also use minified code to allow for more things to be executed (code can be minified in multiple websites and sources; my recommendation is [Minify JS](https://minify-js.com "JS Minifier")).
 
 ## Installation
 AutoExe can be installed into your Bloxd.io world by **copy-pasting the code below into World Code**.
