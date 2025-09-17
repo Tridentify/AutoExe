@@ -2,7 +2,7 @@
 AutoExe is a helper function that can run code in Code Blocks through various means, i.e. World Code, and other Code Blocks, without having the need to click on the Code Block.
 
 ## Description
-Global object `exe` has a few methods. These methods allow code to be executed through different means, for example, through World Code. AutoExe can also help by allowing a user to extend their code, as there is a limit for the number of characters in World Code. Using AutoExe and global object `exe`, a user can execute code in code blocks to initialise parts of their World Code.
+Global object `exe` has a few methods. These methods allow code to be executed through different means, for example, through World Code. AutoExe can also help by allowing a user to extend their code, as there is a limit for the number of characters in World Code. Using AutoExe and global object `exe`, a user can execute code in *Code Blocks* (**not** through chests with item data), to initialise parts of their World Code.
 
 `exe` also lets the user check whether a specific code block has been executed before. The user may also choose to remove a specific log of a code's execution.
 
